@@ -2,6 +2,12 @@
 
 [Dataset link](https://s3-us-west-2.amazonaws.com/static.pyimagesearch.com/keras-tutorial/keras-tutorial.zip)
 
+Install conda environment by,
+
+```
+conda env create -f env.yml
+```
+
 ## Simple Neural Network
 
 Extract dataset into `simple_nn/images` directory.
