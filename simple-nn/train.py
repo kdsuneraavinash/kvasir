@@ -172,6 +172,8 @@ def train(train_x, test_x, train_y, test_y, sample_size, n_classes,
 
 
 def get_evaluation_report(model, test_x, test_y, classes, batch_size=32):
+    """Generate report on test data"""
+
     predictions = model.predict(test_x, batch_size=batch_size)
 
     y_true = test_y.argmax(axis=1)
@@ -182,6 +184,8 @@ def get_evaluation_report(model, test_x, test_y, classes, batch_size=32):
 
 
 def show_and_save_chart(history, classes, save_path='evaluation', n_epochs=50):
+    """Generate, show and save a plot on accurcy and loss by epoch number"""
+
     x_axis_values = np.arange(0, n_epochs)
     plt.style.use('seaborn-white')
     plt.figure()
@@ -205,10 +209,13 @@ def show_and_save_chart(history, classes, save_path='evaluation', n_epochs=50):
 ###############################################################################
 
 def save(model, report, classes, answers, output_dir='output'):
+    """Save model, list of classes, options.json of selected answers 
+    in output directory"""
+
     model_output_path = os.path.join(output_dir, 'model.hdf')
     classes_output_path = os.path.join(output_dir, 'classes.txt')
     report_output_path = os.path.join(output_dir, 'evaluation.txt')
-    answers_output_path =  'options.json'
+    answers_output_path = 'options.json'
 
     model.save(model_output_path)
     with open(classes_output_path, 'w') as fw:
@@ -223,7 +230,7 @@ def save(model, report, classes, answers, output_dir='output'):
 #               Main
 ###############################################################################
 
-if __name__ == "__main__":
+def ask():
     def is_digit_and_positive(_, x):
         return x.isdigit() and 0 < int(x)
 
@@ -265,6 +272,12 @@ if __name__ == "__main__":
                       default='output',  validate=is_directory)
     ]
     answers = inquirer.prompt(questions)
+
+    return answers
+
+
+if __name__ == "__main__":
+    answers = ask()
 
     try:
         random_seed = int(answers['random_seed'])
