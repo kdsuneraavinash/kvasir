@@ -8,4 +8,4 @@ Extract dataset into `simple_nn/images` directory.
 
 ![Architecture](https://www.pyimagesearch.com/wp-content/uploads/2018/09/keras_tutorial_simplenn_arch.png)
 
-[IPython Notebook]("simple-nn/simple-nn.ipynb")
+[IPython Notebook](simple-nn/simple-nn.ipynb)
