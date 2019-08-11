@@ -3,3 +3,5 @@ kvasir-dataset-v2.zip
 
 **/.ipynb_checkpoints
 **/.vscode
+
+simple-nn/__pycache__/
