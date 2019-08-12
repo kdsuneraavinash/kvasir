@@ -21,6 +21,10 @@ class Print:
     def error(message):
         print(f"[WARN] {message}")
 
+    @staticmethod
+    def processing(message):
+        print(f"[PROCESSING] {message}", end='\r')
+
 
 ###############################################################################
 #               Loading Dataset
@@ -85,8 +89,9 @@ def load_image_dataset(dataset_path, image_width=32, image_height=32,
         labels.append(label)
 
         if image_path_ind % notification_milestone == 0:
-            Print.information(f"Loaded {image_path_ind}/{n_images} images")
+            Print.processing(f"Loaded {image_path_ind}/{n_images} images")
 
+    print()
     Print.information("Dataset loaded into memory")
 
     images = np.array(images, dtype='float') / 255
@@ -110,7 +115,7 @@ def prepare_dataset(samples, labels, test_size=0.25):
     label_binarizer = LabelBinarizer()
     label_binarizer.fit(y)
 
-    n_classes = label_binarizer.classes_
+    n_classes = len(label_binarizer.classes_)
     if n_classes != len(set(test_y)):
         Print.error("Test set does not contain one of each class.")
 

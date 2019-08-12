@@ -1,1 +1,1 @@
-{"random_seed": "170081", "dataset_directory": "images", "image_extensions": ".jpg", "image_width": "48", "image_height": "", "notif_gap": "250", "test_split_percentage": "0.2", "learning_rate": "0.01", "n_epochs": "50", "batch_size": "32", "output_dir": "output"}
+{"random_seed": "170081", "dataset_directory": "images", "image_extensions": "jpg", "image_width": "64", "image_height": "", "notif_gap": "1", "test_split_percentage": "0.2", "learning_rate": "0.01", "n_epochs": "75", "batch_size": "32", "output_dir": "output"}
