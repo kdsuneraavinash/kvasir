@@ -7,4 +7,6 @@ kvasir-dataset-v2.zip
 
 **/__pycache__
 
-**/model.hdf
+**/*.hdf5
+
+**/*.cache
