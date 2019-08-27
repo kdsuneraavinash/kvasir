@@ -16,6 +16,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 |----------------------|-------|
 | Image Resolution     | 32x32 |
 | Test Data Percentage | 20%   |
+| Augmented            | No    |
 | Learning Rate        | 0.01  |
 | Batch Size           | 32    |
 | Number of Epochs     | 50    |
@@ -32,6 +33,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 |----------------------|-------|
 | Image Resolution     | 32x32 |
 | Test Data Percentage | 20%   |
+| Augmented            | No    |
 | Learning Rate        | 0.01  |
 | Batch Size           | 32    |
 | Number of Epochs     | 50    |
@@ -48,16 +50,28 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 
 | PARAMETER            | VALUE |
 |----------------------|-------|
-| Image Resolution     | 64x64 |
+| Image Resolution     | 32x32 |
 | Test Data Percentage | 20%   |
+| Augmented            | Yes   |
 | Learning Rate        | 0.01  |
 | Batch Size           | 32    |
 | Number of Epochs     | 50    |
 | Average Precision    | 74%   |
 | Average Recall       | 71%   |
 
-### Small VGGNet [63x64 Images]
+### Small VGGNet [64x64 Images]
 
 ![Simple Neural Network](small-vggnet-64/chart.png)
 
 [IPython Notebook](SMALL_VGGNET_64.ipynb)
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Image Resolution     | 64x64 |
+| Test Data Percentage | 20%   |
+| Augmented            | Yes   |
+| Learning Rate        | 0.01  |
+| Batch Size           | 32    |
+| Number of Epochs     | 50    |
+| Average Precision    | 73%   |
+| Average Recall       | 60%   |
