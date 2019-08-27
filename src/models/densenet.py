@@ -24,15 +24,15 @@ class DenseNetModel:
         """https://arxiv.org/abs/1608.06993"""
 
         input_shape = (self.height, self.width,  self.depth)
-        model = DenseNet(input_shape=input_shape, dense_blocks=3, dense_layers=-1,
-                         growth_rate=12, nb_classes=self.n_classes, dropout_rate=0.2,
-                         bottleneck=False, compression=0.5, weight_decay=1e-4, depth=40)
+        model, model_name = DenseNet(input_shape=input_shape, dense_blocks=3, dense_layers=-1,
+                            growth_rate=12, nb_classes=self.n_classes, dropout_rate=0.2,
+                            bottleneck=False, compression=0.5, weight_decay=1e-4, depth=40)
 
         optimizer = SGD(lr=self.learning_rate,
                         decay=self.learning_rate/self.n_epochs)
         model.compile(loss='categorical_crossentropy', optimizer=optimizer,
                       metrics=['accuracy'])
-
+        self.name = f"{self.name}-{model_name}"
         self.model = model
 
     def fit(self, train_x, train_y, test_x, test_y):
