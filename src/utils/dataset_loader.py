@@ -95,8 +95,7 @@ class ImageDatasetLoader:
                 images.append(image)
                 labels.append(label)
 
-                Printer.processing(f"Loaded {ind}/{len(image_paths)} images. " +
-                                   f"Memory usage is {sys.getsizeof(images) / 1024}kB.")
+                Printer.processing(f"Loaded {ind}/{len(image_paths)} images.")
 
             Printer.end_processing()
 
