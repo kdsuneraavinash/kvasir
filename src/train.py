@@ -42,9 +42,9 @@ if __name__ == "__main__":
         report.evaluation_report()
         report.chart(history)
 
-        model_output_path = os.path.join(options.output_dir, '[simple_nn]model.hdf5')
-        classes_output_path = os.path.join(options.output_dir, '[simple_nn]classes.txt')
-        answers_output_path = os.path.join(options.output_dir, '[simple_nn]options.json')
+        model_output_path = os.path.join(options.output_dir, '[{}]model.hdf5'.format(neuralNet.name))
+        classes_output_path = os.path.join(options.output_dir, '[{}]classes.txt'.format(neuralNet.name))
+        answers_output_path = os.path.join(options.output_dir, '[{}]options.json'.format(neuralNet.name))
 
         neuralNet.save(model_output_path)
         with open(classes_output_path, 'w') as fw:
