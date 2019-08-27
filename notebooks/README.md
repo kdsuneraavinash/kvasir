@@ -1,5 +1,63 @@
 # KVASIR Dataset (Simple Neural Network)
 
-![Architecture](https://camo.githubusercontent.com/e94b9a7fb03a7189bb07a44b9cfd591cb5d57651/68747470733a2f2f7777772e7079696d6167657365617263682e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f30392f6b657261735f7475746f7269616c5f73696d706c656e6e5f617263682e706e67)
+Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dataset-v2.zip)
 
-[Open IPython Notebook](README.ipynb)
+## Simple Neural Network
+
+![Base Model](https://www.pyimagesearch.com/wp-content/uploads/2018/09/keras_tutorial_simplenn_arch.png)
+
+### Simple Neural Network [Normal]
+
+![Simple Neural Network](simple-nn/chart.png)
+
+[IPython Notebook](SIMPLE_NN.ipynb)
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Image Resolution     | 32x32 |
+| Test Data Percentage | 20%   |
+| Learning Rate        | 0.01  |
+| Batch Size           | 32    |
+| Number of Epochs     | 50    |
+| Average Precision    | 71%   |
+| Average Recall       | 70%   |
+
+### Simple Neural Network [Greyscaled]
+
+![Simple Neural Network](simple-nn-grey/chart.png)
+
+[IPython Notebook](SIMPLE_NN_GREY.ipynb)
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Image Resolution     | 32x32 |
+| Test Data Percentage | 20%   |
+| Learning Rate        | 0.01  |
+| Batch Size           | 32    |
+| Number of Epochs     | 50    |
+| Average Precision    | 50%   |
+| Average Recall       | 51%   |
+
+## Small VGGNet
+
+### Small VGGNet [Normal]
+
+![Simple Neural Network](small-vggnet/chart.png)
+
+[IPython Notebook](SMALL_VGGNET.ipynb)
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Image Resolution     | 64x64 |
+| Test Data Percentage | 20%   |
+| Learning Rate        | 0.01  |
+| Batch Size           | 32    |
+| Number of Epochs     | 50    |
+| Average Precision    | 74%   |
+| Average Recall       | 71%   |
+
+### Small VGGNet [63x64 Images]
+
+![Simple Neural Network](small-vggnet-64/chart.png)
+
+[IPython Notebook](SMALL_VGGNET_64.ipynb)
