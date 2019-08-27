@@ -76,7 +76,8 @@ class ModelOptions:
             return os.path.isdir(x)
 
         questions = [
-            inquirer.List('model_name', message='What model to use?', choices=['SimpleNN', 'Small VGGNet']),
+            inquirer.List('model_name', message='What model to use?', 
+                         choices=['SimpleNN', 'Small VGGNet', 'DenseNet']),
             inquirer.Text('random_seed', message='Set the random seed',
                           default='170081', validate=is_digit_and_positive),
             inquirer.Text('dataset_directory', message='What is the dataset directory?',

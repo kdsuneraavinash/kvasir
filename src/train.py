@@ -6,6 +6,7 @@ import tensorflow as tf
 
 from models.simple_nn import SimpleNN
 from models.vggnet import SmallVGGNet
+from models.densenet import DenseNetModel
 from utils.dataset_loader import ImageDatasetLoader
 from utils.modal_options import ModelOptions
 from utils.printer import Printer
@@ -31,6 +32,8 @@ if __name__ == "__main__":
 
         if options.model_name == "SimpleNN":
             neuralNet: SimpleNN = SimpleNN(options=options, n_classes=len(classes))
+        elif options.model_name == "DenseNet":
+            neuralNet: DenseNet = DenseNetModel(options=options, n_classes=len(classes))
         else:
             neuralNet: SmallVGGNet = SmallVGGNet(options=options, n_classes=len(classes))
 
