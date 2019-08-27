@@ -47,7 +47,7 @@ class Report:
         plt.plot(x_axis_values,
                  history.history['val_acc'], label='Accuracy(Test)')
 
-        plt.title("Training Loss and Accuracy (Small VGGNet)")
+        plt.title("Training Loss and Accuracy ({})".format(self.neural_net.name))
         plt.xlabel("Epoch Number")
         plt.ylabel("Loss/Accuracy")
         plt.legend()

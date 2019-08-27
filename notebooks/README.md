@@ -8,7 +8,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 
 ### Simple Neural Network [Normal]
 
-![Simple Neural Network](simple-nn/chart.png)
+![Chart](simple-nn/chart.png)
 
 | PARAMETER            | VALUE |
 |----------------------|-------|
@@ -25,7 +25,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 
 ### Simple Neural Network [Greyscaled]
 
-![Simple Neural Network](simple-nn-grey/chart.png)
+![Chart](simple-nn-grey/chart.png)
 
 | PARAMETER            | VALUE |
 |----------------------|-------|
@@ -44,7 +44,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 
 ### Small VGGNet [Normal]
 
-![Simple Neural Network](small-vggnet/chart.png)
+![Chart](small-vggnet/chart.png)
 
 | PARAMETER            | VALUE |
 |----------------------|-------|
@@ -61,7 +61,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 
 ### Small VGGNet [64x64 Images]
 
-![Simple Neural Network](small-vggnet-64/chart.png)
+![Chart](small-vggnet-64/chart.png)
 
 | PARAMETER            | VALUE |
 |----------------------|-------|
@@ -78,7 +78,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 
 ### Small VGGNet [128x128 Images]
 
-![Simple Neural Network](small-vggnet-128/chart.png)
+![Chart](small-vggnet-128/chart.png)
 
 | PARAMETER            | VALUE   |
 |----------------------|---------|
@@ -90,5 +90,39 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 | Number of Epochs     | 100     |
 | Average Precision    | 79%     |
 | Average Recall       | 74%     |
+
+Generated using python script.
+
+## DenseNet
+
+[More Info](https://arxiv.org/abs/1608.06993)
+
+[Densenet Keras Implementation](https://github.com/seasonyc/densenet)
+
+![Chart](densenet-densec/chart.png)
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Image Resolution     | 64x64 |
+| Test Data Percentage | 15%   |
+| Augmented            | Yes   |
+| Learning Rate        | 0.01  |
+| Batch Size           | 64    |
+| Number of Epochs     | 50    |
+| Average Precision    | 67%   |
+| Average Recall       | 53%   |
+
+### DenseNet  hyperparamerters
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Dense Blocks         | 3     |
+| Dense Layers         | 1     |
+| Growth Rate          | 12    |
+| Dropout Rate         | 20%   |
+| Bottleneck           | No    |
+| Compression          | 0.5   |
+| Weight Decay         | 1e-4  |
+| Depth                | 540   |
 
 Generated using python script.
