@@ -33,7 +33,7 @@ if __name__ == "__main__":
         if options.model_name == "SimpleNN":
             neuralNet: SimpleNN = SimpleNN(options=options, n_classes=len(classes))
         elif options.model_name == "DenseNet":
-            neuralNet: DenseNet = DenseNetModel(options=options, n_classes=len(classes))
+            neuralNet: DenseNetModel = DenseNetModel(options=options, n_classes=len(classes))
         else:
             neuralNet: SmallVGGNet = SmallVGGNet(options=options, n_classes=len(classes))
 
