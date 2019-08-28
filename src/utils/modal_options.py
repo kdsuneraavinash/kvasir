@@ -84,7 +84,7 @@ class ModelOptions:
                           default='../images', validate=is_directory),
             inquirer.Text('image_extensions', message='What are image  extensions?(Separate with space)',
                           default='jpg', validate=lambda _, x: len(x) > 1),
-            inquirer.Text('image_width', message='What is the image height? (Ignored for Inception model)',
+            inquirer.Text('image_width', message='What is the image height? (Use 299 for Inception)',
                           default='64', validate=is_digit_and_positive),
             inquirer.Text('image_height', message='What is the image weight? (Leave empty to use width)',
                           validate=lambda _, x: len(x) == 0 or is_digit_and_positive(_, x)),
