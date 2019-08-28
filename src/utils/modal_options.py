@@ -77,14 +77,14 @@ class ModelOptions:
 
         questions = [
             inquirer.List('model_name', message='What model to use?', 
-                         choices=['SimpleNN', 'Small VGGNet', 'DenseNet']),
+                         choices=['SimpleNN', 'Small VGGNet', 'DenseNet', 'Inception']),
             inquirer.Text('random_seed', message='Set the random seed',
                           default='170081', validate=is_digit_and_positive),
             inquirer.Text('dataset_directory', message='What is the dataset directory?',
                           default='../images', validate=is_directory),
             inquirer.Text('image_extensions', message='What are image  extensions?(Separate with space)',
                           default='jpg', validate=lambda _, x: len(x) > 1),
-            inquirer.Text('image_width', message='What is the image height?',
+            inquirer.Text('image_width', message='What is the image height? (Ignored for Inception model)',
                           default='64', validate=is_digit_and_positive),
             inquirer.Text('image_height', message='What is the image weight? (Leave empty to use width)',
                           validate=lambda _, x: len(x) == 0 or is_digit_and_positive(_, x)),

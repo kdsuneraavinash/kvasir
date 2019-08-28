@@ -7,6 +7,8 @@ import tensorflow as tf
 from models.simple_nn import SimpleNN
 from models.vggnet import SmallVGGNet
 from models.densenet import DenseNetModel
+from models.inception import InceptionV4Model
+
 from utils.dataset_loader import ImageDatasetLoader
 from utils.modal_options import ModelOptions
 from utils.printer import Printer
@@ -34,6 +36,8 @@ if __name__ == "__main__":
             neuralNet: SimpleNN = SimpleNN(options=options, n_classes=len(classes))
         elif options.model_name == "DenseNet":
             neuralNet: DenseNetModel = DenseNetModel(options=options, n_classes=len(classes))
+        elif options.model_name == "Inception":
+            neuralNet: InceptionV4Model = InceptionV4Model(options=options, n_classes=len(classes))
         else:
             neuralNet: SmallVGGNet = SmallVGGNet(options=options, n_classes=len(classes))
 
