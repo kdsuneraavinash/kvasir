@@ -91,7 +91,7 @@ Dataset Link: [KVASIR Dataset](https://datasets.simula.no/kvasir/data/kvasir-dat
 | Average Precision    | 79%     |
 | Average Recall       | 74%     |
 
-Generated using python script.
+[Generated using python script.](https://asciinema.org/a/264475)
 
 ## DenseNet
 
@@ -124,5 +124,32 @@ Generated using python script.
 | Compression          | 0.5   |
 | Weight Decay         | 1e-4  |
 | Depth                | 540   |
+
+[Generated using python script.](https://asciinema.org/a/1EKyJpvnbESlkG0bVWAmCv96z)
+
+## Inception V4
+
+[More Info](https://arxiv.org/abs/1602.07261)
+
+[Inception V4 Keras Implementation](https://github.com/kentsommer/keras-inceptionV4)
+
+![Chart](inception-v4/chart.png)
+
+| PARAMETER            | VALUE   |
+|----------------------|---------|
+| Image Resolution     | 299x299 |
+| Test Data Percentage | 15%     |
+| Augmented            | Yes     |
+| Learning Rate        | 0.01    |
+| Batch Size           | 16      |
+| Number of Epochs     | 50      |
+| Average Precision    | 81%     |
+| Average Recall       | 81%     |
+
+### Inception V4 hyperparamerters
+
+| PARAMETER            | VALUE |
+|----------------------|-------|
+| Dropout Probability  | 20%   |
 
 Generated using python script.
