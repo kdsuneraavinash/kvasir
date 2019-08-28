@@ -28,13 +28,12 @@ class InceptionV4Model:
             exit()
 
         input_shape = (self.height, self.width,  self.depth)
-        model, model_name = InceptionV4(num_classes=self.n_classes, dropout_prob=0.2)
+        model = InceptionV4(num_classes=self.n_classes, dropout_prob=0.2)
 
         optimizer = SGD(lr=self.learning_rate,
                         decay=self.learning_rate/self.n_epochs)
         model.compile(loss='categorical_crossentropy', optimizer=optimizer,
                       metrics=['accuracy'])
-        self.name = f"{self.name}-{model_name}"
         self.model = model
 
     def fit(self, train_x, train_y, test_x, test_y):
