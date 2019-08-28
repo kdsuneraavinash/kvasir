@@ -102,7 +102,7 @@ class ImageDatasetLoader:
             images = np.array(images, dtype='float')
             labels = np.array(labels)
 
-            if not sys.sizeof(images) > 1024*1024*1024:
+            if not sys.getsizeof(images) > 1024*1024*1024:
                 with open(cache_file, 'wb') as fw:
                     pickle.dump((images, labels), fw)
 
