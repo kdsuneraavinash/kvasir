@@ -10,3 +10,5 @@ kvasir-dataset-v2.zip
 **/*.hdf5
 
 **/*.cache
+**/*.pkl
+**/*.pth
